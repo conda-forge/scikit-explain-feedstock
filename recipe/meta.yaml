@@ -1,13 +1,13 @@
 {% set name = "scikit-explain" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c89edf0e4994652a5b98a68b6cdeb3da5ecf27bcbac0b54c2928c380938a719
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 5dd646d049c26be707f1222482596184886d57fcd876c590884941e97089b10b
 
 build:
   noarch: python
@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
 
   run:
     - ipywidgets
