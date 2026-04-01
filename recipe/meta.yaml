@@ -1,5 +1,5 @@
 {% set name = "scikit-explain" %}
-{% set version = "0.1.7" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5dd646d049c26be707f1222482596184886d57fcd876c590884941e97089b10b
+  sha256: 189c343ebd363f23831808df53cda31d04af476c1780f651a7b902bc36ca35fc
 
 build:
   noarch: python
